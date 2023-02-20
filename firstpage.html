@@ -4,46 +4,42 @@
     <meta charset="UTF-8">
     <title>My Website</title>
     <style>
-      /* Set the menu width and height */
-      #menu {
-        width: 200px;
-        height: 100%;
-        background-color: #f1f1f1;
-        float: left;
+      /* Style the GNB container */
+      .gnb {
+        background-color: #333333;
+        overflow: hidden;
       }
 
-      /* Set the content width and margin-left to move it to the right */
-      #content {
-        width: calc(100% - 200px);
-        margin-left: 200px;
-        padding: 20px;
-        background-color: #ffffff;
+      /* Style the GNB links */
+      .gnb a {
         float: left;
-      }
-
-      /* Style the menu links */
-      #menu a {
-        display: block;
-        padding: 10px;
+        color: #ffffff;
+        text-align: center;
+        padding: 14px 16px;
         text-decoration: none;
-        color: #000000;
         font-size: 18px;
       }
 
-      /* Style the active menu link */
-      #menu a.active {
+      /* Change the color of links on hover */
+      .gnb a:hover {
         background-color: #4CAF50;
         color: #ffffff;
+      }
+
+      /* Style the active GNB link */
+      .gnb .active {
+        background-color: #4CAF50;
       }
     </style>
   </head>
   <body>
-    <div id="menu">
-      <a href="#" class="active">Home</a>
+    <div class="gnb">
+      <a class="active" href="#">Home</a>
       <a href="#">About</a>
       <a href="#">Contact</a>
+      <a href="#">Services</a>
     </div>
-    <div id="content">
+    <div>
       <h1>Welcome to my website</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla gravida velit id neque malesuada tristique. Integer ac ex purus. Duis quis nunc a purus scelerisque interdum sed vel nisl. Proin pulvinar est eu arcu eleifend, a aliquam nisl semper. Nam eu felis sit amet sapien facilisis finibus eu at orci. Donec laoreet, sapien sed tristique suscipit, est libero fringilla nulla, vitae congue nisi quam vel augue. Donec dictum lobortis urna a lacinia. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nunc id libero vel magna aliquam dapibus. Sed interdum, urna non lobortis aliquet, elit quam sagittis elit, eu tincidunt elit elit non turpis. Fusce at augue non magna fermentum vehicula.</p>
     </div>
