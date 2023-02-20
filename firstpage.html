@@ -30,6 +30,35 @@
       .gnb .active {
         background-color: #4CAF50;
       }
+
+      /* Style the submenu container */
+      .submenu {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+      }
+
+      /* Style the submenu links */
+      .submenu a {
+        color: #333333;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+      }
+
+      /* Change the color of submenu links on hover */
+      .submenu a:hover {
+        background-color: #ddd;
+      }
+
+      /* Show the submenu on hover */
+      .gnb a:hover + .submenu {
+        display: block;
+      }
     </style>
   </head>
   <body>
@@ -38,10 +67,33 @@
       <a href="#">About</a>
       <a href="#">Contact</a>
       <a href="#">Services</a>
+      <div class="submenu">
+        <a href="#">Service 1</a>
+        <a href="#">Service 2</a>
+        <a href="#">Service 3</a>
+      </div>
+      <div class="submenu">
+        <a href="#">Contact 1</a>
+        <a href="#">Contact 2</a>
+        <a href="#">Contact 3</a>
+      </div>
+      <div class="submenu">
+        <a href="#">About 1</a>
+        <a href="#">About 2</a>
+        <a href="#">About 3</a>
+      </div>
+      <div class="submenu">
+        <a href="#">Service 4</a>
+        <a href="#">Service 5</a>
+        <a href="#">Service 6</a>
+      </div>
     </div>
     <div>
       <h1>Welcome to my website</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla gravida velit id neque malesuada tristique. Integer ac ex purus. Duis quis nunc a purus scelerisque interdum sed vel nisl. Proin pulvinar est eu arcu eleifend, a aliquam nisl semper. Nam eu felis sit amet sapien facilisis finibus eu at orci. Donec laoreet, sapien sed tristique suscipit, est libero fringilla nulla, vitae congue nisi quam vel augue. Donec dictum lobortis urna a lacinia. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nunc id libero vel magna aliquam dapibus. Sed interdum, urna non lobortis aliquet, elit quam sagittis elit, eu tincidunt elit elit non turpis. Fusce at augue non magna fermentum vehicula.</p>
-    </div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla gravida velit id neque malesuada tristique. Integer ac ex purus. Duis quis nunc a purus scelerisque interdum sed vel nisl. Proin pulvinar est eu arcu eleifend, a
+odio quam feugiat lectus. Sed ac massa sit amet ipsum faucibus pulvinar. Sed condimentum, nunc ac faucibus fermentum, velit augue bibendum libero, a volutpat nunc orci eu est. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam sagittis ipsum sit amet diam iaculis, ut aliquam magna scelerisque. Fusce vestibulum risus eget metus ultrices, ut tincidunt lorem consequat. Nulla facilisi. Integer rhoncus velit quis arcu rutrum ullamcorper. Sed sed est at ex dictum efficitur. Nam lobortis commodo nisl, quis bibendum orci imperdiet id.</p>
+<p>Nunc nec neque ac dolor finibus fermentum. Aliquam sed nunc sed tortor tincidunt finibus. Nullam euismod orci ligula, at lobortis augue mattis id. Nulla pharetra risus vel purus rutrum, eget dapibus arcu fringilla. Sed non massa non ligula gravida ultricies. Fusce ac nibh vel nulla aliquam pellentesque. Sed faucibus fringilla est, in malesuada augue tincidunt a. Integer faucibus quis libero sed auctor. Duis pellentesque laoreet orci, at dictum lectus commodo a. Morbi scelerisque ipsum ac arcu pulvinar, sed tincidunt neque facilisis. Donec euismod ante vel odio tristique, vel pharetra massa efficitur.</p>
+</div>
+
   </body>
 </html>
