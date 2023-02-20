@@ -1,102 +1,118 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>GNB Example</title>
-    <style>
-      /* Style for GNB */
-      #gnb {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 200px;
-        height: 100%;
-        background-color: #f2f2f2;
-        padding: 20px;
-        box-sizing: border-box;
-      }
-      
-      /* Style for GNB links */
-      #gnb a {
-        display: block;
-        margin-bottom: 10px;
-        color: #333;
-        text-decoration: none;
-        font-size: 18px;
-      }
-      
-      /* Style for GNB submenus */
-      .submenu {
-        display: none;
-      }
-      
-      /* Style for content area */
-      #content {
-        margin-left: 220px;
-        padding: 20px;
-      }
-    </style>
-  </head>
-  <body>
-    <!-- GNB -->
-    <div id="gnb">
-      <h2>GNB</h2>
-      <ul>
-        <li><a href="#">Menu 1</a>
-          <ul class="submenu">
-            <li><a href="#">Submenu 1-1</a></li>
-            <li><a href="#">Submenu 1-2</a></li>
-            <li><a href="#">Submenu 1-3</a></li>
-          </ul>
-        </li>
-        <li><a href="#">Menu 2</a>
-          <ul class="submenu">
-            <li><a href="#">Submenu 2-1</a></li>
-            <li><a href="#">Submenu 2-2</a></li>
-            <li><a href="#">Submenu 2-3</a></li>
-          </ul>
-        </li>
-        <li><a href="#">Menu 3</a>
-          <ul class="submenu">
-            <li><a href="#">Submenu 3-1</a></li>
-            <li><a href="#">Submenu 3-2</a></li>
-            <li><a href="#">Submenu 3-3</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-    
-    <!-- Content area -->
-    <div id="content">
-      <h1>Content Area</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sagittis eros quis lacinia suscipit. Vestibulum feugiat, dolor vel efficitur gravida, odio quam feugiat lectus. Sed ac massa sit amet ipsum faucibus pulvinar. Sed condimentum, nunc ac faucibus fermentum, velit augue bibendum libero, a volutpat nunc orci eu est. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam sagittis ipsum sit amet diam iaculis, ut aliquam magna scelerisque. Fusce vestibulum risus eget metus ultrices, ut tincidunt lorem consequat. Nulla facilisi. Integer rhoncus velit quis arcu rutrum ullamcorper. Sed sed est at ex dictum efficitur. Nam lobortis commodo nisl, quis bibendum orci imperdiet id.</p>
-      
-      
-      
-      
-        <p>Etiam rhoncus lobortis orci, ut ultricies felis dapibus nec. Sed in ex eget lacus eleifend suscipit. Duis sed eleifend metus. Aliquam semper eget massa sit amet pellentesque. Aenean sodales, ex non aliquet laoreet, turpis sapien venenatis mauris, vel auctor neque felis in ipsum. Sed bibendum ultricies mi. Nullam quis elit ut elit laoreet tempor sed at dolor. Donec elementum turpis ut libero hendrerit faucibus. Aliquam sagittis purus sapien, nec ultricies elit convallis at. Phasellus porttitor quam in mauris ullamcorper, eu iaculis dolor viverra. In finibus malesuada convallis. Nulla a risus eu sapien hendrerit iaculis.</p>
-  <p>Suspendisse ac aliquet lectus. Vestibulum quis sapien eget erat pharetra finibus. Maecenas malesuada nulla id semper laoreet. Fusce euismod velit at ipsum vestibulum, ac facilisis nisl dapibus. Aliquam blandit ipsum eu mi consectetur commodo. Sed in fermentum lorem. In vehicula massa sit amet urna commodo ullamcorper. Ut non feugiat risus, eu aliquet eros. Integer in velit eu ipsum efficitur venenatis. Donec ac magna sit amet ex tincidunt fermentum. Proin efficitur hendrerit enim, vel congue urna dignissim vel. Ut aliquet felis eu velit ultrices, at dignissim justo eleifend. Sed efficitur odio mauris, a dignissim magna rhoncus eu. Suspendisse potenti. Sed at quam at mauris lacinia aliquet nec sit amet mauris.</p>
-</div>
+<head>
+	<title>GNB Example</title>
+	<style>
+		/* CSS for body */
+		body {
+			display: flex;
+			flex-direction: column;
+			height: 100vh;
+			margin: 0;
+			padding: 0;
+			font-family: Arial, sans-serif;
+		}
 
-<!-- JavaScript for submenus -->
-<script>
-  // Get all GNB links with submenus
-  var gnbLinks = document.querySelectorAll("#gnb li > a");
+		/* CSS for GNB */
+		#gnb {
+			background-color: #333;
+			color: #fff;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 10px;
+			flex-wrap: wrap;
+		}
+
+		#gnb ul {
+			display: flex;
+			flex-wrap: wrap;
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+
+		#gnb li {
+			margin: 0 10px;
+			position: relative;
+		}
+
+		#gnb li:hover ul {
+			display: block;
+		}
+
+		#gnb a {
+			color: #fff;
+			text-decoration: none;
+			font-weight: bold;
+			padding: 10px;
+		}
+
+		#gnb ul ul {
+			display: none;
+			position: absolute;
+			top: 40px;
+			left: 0;
+			background-color: #fff;
+			border: 1px solid #333;
+			z-index: 1;
+		}
+
+		#gnb ul li {
+			display: inline-block;
+			margin: 0;
+			padding: 0;
+			position: relative;
+		}
+
+		#gnb ul a {
+			color: #333;
+			display: block;
+			padding: 10px;
+		}
+
+		/* CSS for content area */
+		#content {
+			margin: 10px;
+			padding: 10px;
+			border: 1px solid #333;
+			background-color: #fff;
+			flex: 1;
+		}
+	</style>
+</head>
+<body>
+	<header id="gnb">
+		<nav>
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">About</a>
+					<ul>
+						<li><a href="#">Our Team</a></li>
+						<li><a href="#">Our Story</a></li>
+						<li><a href="#">Our Vision</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Services</a>
+					<ul>
+						<li><a href="#">Web Design</a></li>
+						<li><a href="#">Graphic Design</a></li>
+						<li><a href="#">SEO</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</nav>
+		<div>
+			<p>Welcome to my website!</p>
+		</div>
+	</header>
+	<section id="content">
+		<h1>Lorem Ipsum</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris placerat ultrices neque, sed ornare tellus blandit sit amet. Pellentesque a odio non nunc ullamcorper posuere. Donec vulputate purus at nibh aliquet, vel iaculis nisi faucibus. Sed sagittis nisl eget nulla dignissim, quis cursus massa ultrices. Ut nec bibendum arcu
+	. Vestibulum id urna euismod, sollicitudin ipsum a, vehicula velit. Nunc nec diam id turpis blandit ullamcorper at vitae lacus. Praesent volutpat varius libero vel pellentesque. Curabitur eget ex euismod, iaculis arcu sit amet, tincidunt libero. Sed nec fermentum urna. Donec vitae ex quis odio tincidunt dignissim. Praesent sit amet mi sit amet nisl tristique pretium. Quisque pharetra, quam ac faucibus elementum, velit velit feugiat augue, a vestibulum nisi nunc non erat.</p>
+</section>
+
   
-  // Add event listener to each GNB link
-  gnbLinks.forEach(function(link) {
-    link.addEventListener("mouseover", function() {
-      // Show submenu on hover
-      link.nextElementSibling.style.display = "block";
-    });
-    
-    link.addEventListener("mouseout", function() {
-      // Hide submenu when mouse leaves link
-      link.nextElementSibling.style.display = "none";
-    });
-  });
-</script>
-</body>
+  </body>
 </html>
-      
-      
-      
