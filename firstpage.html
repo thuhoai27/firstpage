@@ -1,40 +1,51 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Kỷ niệm Hà Nội cùng người yêu</title>
+    <meta charset="UTF-8">
+    <title>My Website</title>
     <style>
-      body {
-        background-color: #222;
-        color: #fff;
-        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-        line-height: 1.5;
+      /* Set the menu width and height */
+      #menu {
+        width: 200px;
+        height: 100%;
+        background-color: #f1f1f1;
+        float: left;
       }
-      
-      h1 {
-        color: #a050c5;
-        font-size: 2.5em;
-        margin: 20px 0 10px;
+
+      /* Set the content width and margin-left to move it to the right */
+      #content {
+        width: calc(100% - 200px);
+        margin-left: 200px;
+        padding: 20px;
+        background-color: #ffffff;
+        float: left;
       }
-      
-      p {
-        font-size: 1.2em;
-        margin-bottom: 15px;
+
+      /* Style the menu links */
+      #menu a {
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+        color: #000000;
+        font-size: 18px;
+      }
+
+      /* Style the active menu link */
+      #menu a.active {
+        background-color: #4CAF50;
+        color: #ffffff;
       }
     </style>
   </head>
   <body>
-    <h1>Kỷ niệm Hà Nội cùng người yêu</h1>
-    <p>Hà Nội ơi, nhớ ngày đôi ta cùng bước đi</p>
-    <p>Cùng thắp lên những đom đóm giữa đêm thì</p>
-    <p>Chỉ cần có tay trong tay người yêu thương</p>
-    <p>Đôi ta cùng hòa vào không gian Hà Nội.</p>
-    <p>Nơi đây với phố phường cổ kính và yên bình</p>
-    <p>Với những con phố đông đúc, náo nhiệt, đầy sức sống</p>
-    <p>Với những món ăn ngon đến lạ kì, không thể nào quên được</p>
-    <p>Với tình yêu của chúng ta đẹp như mơ.</p>
-    <p>Cùng ngắm nhìn màu hoàng hôn trên Hồ Gươm</p>
-    <p>Ngắm phố phường lung linh ánh đèn</p>
-    <p>Chỉ cần có nhau, đủ cho đôi ta mãi bên nhau</p>
-    <p>Yêu Hà Nội, yêu người yêu.</p>
+    <div id="menu">
+      <a href="#" class="active">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </div>
+    <div id="content">
+      <h1>Welcome to my website</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla gravida velit id neque malesuada tristique. Integer ac ex purus. Duis quis nunc a purus scelerisque interdum sed vel nisl. Proin pulvinar est eu arcu eleifend, a aliquam nisl semper. Nam eu felis sit amet sapien facilisis finibus eu at orci. Donec laoreet, sapien sed tristique suscipit, est libero fringilla nulla, vitae congue nisi quam vel augue. Donec dictum lobortis urna a lacinia. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nunc id libero vel magna aliquam dapibus. Sed interdum, urna non lobortis aliquet, elit quam sagittis elit, eu tincidunt elit elit non turpis. Fusce at augue non magna fermentum vehicula.</p>
+    </div>
   </body>
 </html>
