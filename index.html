@@ -1,172 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hacker News</title>
-    <style>
-        body {
-            font-family: Verdana, Geneva, sans-serif;
-            font-size: 10pt;
-            color: #000000;
-            background-color: #f6f6ef;
-            margin: 0;
-            padding: 8px;
-        }
-        
-        .header {
-            background-color: #ff6600;
-            padding: 2px;
-            margin-bottom: 8px;
-        }
-        
-        .logo {
-            border: 1px solid white;
-            margin-right: 4px;
-            color: #000000;
-            text-decoration: none;
-            font-weight: bold;
-            display: inline-block;
-            width: 18px;
-            height: 18px;
-            text-align: center;
-            line-height: 18px;
-        }
-        
-        .nav a {
-            color: #000000;
-            text-decoration: none;
-            margin-right: 10px;
-        }
-        
-        .main {
-            padding: 0 5px;
-        }
-        
-        .story {
-            margin-bottom: 5px;
-            line-height: 1.4;
-        }
-        
-        .story-title {
-            color: #000000;
-            text-decoration: none;
-        }
-        
-        .story-title:visited {
-            color: #828282;
-        }
-        
-        .story-domain {
-            color: #828282;
-            font-size: 8pt;
-        }
-        
-        .story-meta {
-            color: #828282;
-            font-size: 7pt;
-        }
-        
-        .story-meta a {
-            color: #828282;
-            text-decoration: none;
-        }
-        
-        .story-meta a:hover {
-            text-decoration: underline;
-        }
-        
-        .rank {
-            color: #828282;
-            min-width: 25px;
-            display: inline-block;
-        }
-
-        .login {
-            float: right;
-            margin-right: 5px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>웹사이트 설계</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="header">
-        <a href="#" class="logo">Y</a>
-        <span class="nav">
-            <b>Hacker News</b>
-            <a href="#">new</a>
-            <a href="#">past</a>
-            <a href="#">comments</a>
-            <a href="#">ask</a>
-            <a href="#">show</a>
-            <a href="#">jobs</a>
-            <a href="#">submit</a>
-        </span>
-        <a href="#" class="login">login</a>
-    </div>
-    
-    <div class="main">
-        <div class="story">
-            <span class="rank">1.</span>
-            <a href="github.com/deepseek-ai" class="story-title">DeepSeek-R1</a>
-            <span class="story-meta">
-                <a href="#">409 points</a> by
-                <a href="#">meetpateltech</a>
-                3 hours ago |
-                <a href="#">hide</a> |
-                <a href="#">132 comments</a>
-            </span>
-        </div>
+  <div class="container">
+    <!-- 상단 메뉴 -->
+    <header class="header">
+      <nav>
+        <ul class="menu">
+          <li><a href="#">홈</a></li>
+          <li><a href="#">소개</a></li>
+          <li><a href="#">소식</a></li>
+        </ul>
+      </nav>
+    </header>
 
-        <div class="story">
-            <span class="rank">2.</span>
-            <a href="mixxx.org" class="story-title">Mixxx: GPL DJ Software</a>
-            <span class="story-meta">
-                <a href="#">11 points</a> by
-                <a href="#">bradgegs</a>
-                12 minutes ago |
-                <a href="#">hide</a> |
-                <a href="#">2 comments</a>
-            </span>
-        </div>
+    <!-- 메인 콘텐츠 -->
+    <main class="main-content">
+      <p>우리 웹사이트에 오신 것을 환영합니다 <br>모든 클릭에 기쁨이 함께하기를 바랍니다</p>
+    </main>
 
-        <div class="story">
-            <span class="rank">3.</span>
-            <a href="grossack.site" class="story-title">Where Do Those Undergraduate Divisibility Problems Come From?</a>
-            <span class="story-meta">
-                <a href="#">32 points</a> by
-                <a href="#">mathgenius</a>
-                2 hours ago |
-                <a href="#">hide</a> |
-                <a href="#">1 comment</a>
-            </span>
-        </div>
-
-        <!-- More stories following the same pattern... -->
-        <!-- I'll include a few more to demonstrate the pattern -->
-
-        <div class="story">
-            <span class="rank">4.</span>
-            <a href="medium.com/swlh" class="story-title">Zork: The Great Inner Workings (2020)</a>
-            <span class="story-meta">
-                <a href="#">54 points</a> by
-                <a href="#">gork_lionel</a>
-                2 hours ago |
-                <a href="#">hide</a> |
-                <a href="#">3 comments</a>
-            </span>
-        </div>
-
-        <div class="story">
-            <span class="rank">5.</span>
-            <a href="mdpi.com" class="story-title">Celestial Navigation for Drones</a>
-            <span class="story-meta">
-                <a href="#">47 points</a> by
-                <a href="#">browo1010</a>
-                2 hours ago |
-                <a href="#">hide</a> |
-                <a href="#">31 comments</a>
-            </span>
-        </div>
-    </div>
+    <!-- 하단 푸터 -->
+    <footer class="footer">
+      <p>© 2025 Vietrest.com All rights reserved.</p>
+    </footer>
+  </div>
 </body>
 </html>
