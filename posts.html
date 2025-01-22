@@ -3,25 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>웹사이트 설계</title>
+  <title>소식 - Vietrest.com</title>
   <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body class="posts-page">
   <div class="container">
     <!-- 상단 메뉴 -->
     <header class="header">
       <nav>
+        <a href="index.html" class="logo">VIETREST</a>
         <ul class="menu">
-          <li><a href="index.html">홈</a></li>
-          <li><a href="about.html">소개</a></li>
-          <li><a href="posts.html">소식</a></li>
+          <li><a href="index.html"><span class="material-icons">home</span> 홈</a></li>
+          <li><a href="about.html"><span class="material-icons">info</span> 소개</a></li>
+          <li><a href="posts.html" class="active"><span class="material-icons">article</span> 소식</a></li>
         </ul>
       </nav>
     </header>
 
     <!-- 메인 콘텐츠 -->
     <main class="main-content">
-      <p>최신 소식과 업데이트를 확인하세요</p>
+      <h1>소식</h1>
+      <div class="welcome-card">
+        <span class="material-icons hero-icon">feed</span>
+        <p>VIETREST 소식 페이지입니다</p>
+        <p class="subtitle">최신 소식과 업데이트를 확인하세요</p>
+      </div>
     </main>
 
     <!-- 하단 푸터 -->
