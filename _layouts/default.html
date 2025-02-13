@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} - {{ site.title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="site-header">
+            <nav>
+                <a href="{{ '/' | relative_url }}" class="site-title">{{ site.title }}</a>
+                <ul class="site-nav">
+                    <li><a href="{{ '/' | relative_url }}" {% if page.url == "/" %}class="active"{% endif %}><span class="material-icons">home</span> 홈</a></li>
+                    <li><a href="{{ '/about/' | relative_url }}" {% if page.url == "/about/" %}class="active"{% endif %}><span class="material-icons">info</span> 소개</a></li>
+                    <li><a href="{{ '/posts/' | relative_url }}" {% if page.url contains "/posts/" %}class="active"{% endif %}><span class="material-icons">article</span> 글</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="page-content">
+            {{ content }}
+        </main>
+
+        <footer class="site-footer">
+            <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html> 

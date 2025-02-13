@@ -1,0 +1,44 @@
+---
+layout: default
+---
+
+<header class="main-header">
+  <h1>{{ site.title }}</h1>
+  <p class="main-description">{{ site.description }}</p>
+</header>
+
+<section class="recent-posts">
+  <h2>최근 게시물</h2>
+  <div class="post-list">
+    {%- for post in site.posts limit:6 -%}
+    <article class="post-item">
+      <a href="{{ post.url | relative_url }}" class="post-link">
+        <div class="post-header">
+          <div class="post-meta-top">
+            <div class="post-info">
+              <span class="material-icons">calendar_today</span>
+              <time>{{ post.date | date: "%Y.%m.%d" }}</time>
+            </div>
+            {% if post.categories.size > 0 %}
+            <span class="post-category">{{ post.categories | first }}</span>
+            {% endif %}
+          </div>
+          <h3 class="post-title">{{ post.title }}</h3>
+          {% if post.excerpt %}
+          <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 100 }}</p>
+          {% endif %}
+        </div>
+      </a>
+    </article>
+    {%- endfor -%}
+  </div>
+  
+  {% if site.posts.size > 6 %}
+  <div class="view-more">
+    <a href="{{ '/posts/' | relative_url }}" class="btn-view-more">
+      <span>더 많은 글 보기</span>
+      <span class="material-icons">arrow_forward</span>
+    </a>
+  </div>
+  {% endif %}
+</section> 
